@@ -1,0 +1,371 @@
+/* 
+   $10K Checklist Implementation:
+   - Restrained color system (Dark-Luxury)
+   - Breathing hierarchy (vh, vw, rem, generous padding)
+   - Typography that works (Playfair + Montserrat)
+   - Mobile designed, not shrunk
+*/
+
+:root {
+    /* Powściągliwy system kolorów (3-5 barw) */
+    --bg-base: #0a0a0a;
+    --bg-surface: #141414;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a3a3a3;
+    --accent-gold: #c5a059;
+    --accent-gold-hover: #e0b86a;
+
+    /* Sparowana typografia */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* Reset & Niewidzialne drogie rzeczy (A11y, plynny scroll) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typografia bazowa */
+h1, h2, h3, h4, .nav-brand, .footer-brand {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Motion that whispers */
+}
+
+a:hover {
+    color: var(--accent-gold);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Nawigacja */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-brand {
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Hero Section (Hierarchia z oddechem) */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2000&auto=format&fit=crop') center/cover;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeUp 1s ease forwards; /* Subtelny ruch */
+}
+
+.hero .subtitle {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--accent-gold);
+    color: var(--bg-base);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-gold-hover);
+    color: var(--bg-base);
+    transform: translateY(-2px);
+}
+
+/* Wspólne style sekcji */
+.section {
+    padding: 8rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-gold);
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* Sale i Udogodnienia */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about .text-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-gold);
+}
+
+.about .text-content p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.features-list span {
+    color: var(--accent-gold);
+}
+
+/* Miejsce na zdjęcie (Imagery with intent) */
+.image-placeholder {
+    width: 100%;
+    height: 500px;
+    background-color: var(--bg-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.image-note {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Menu (Zastąpienie PDF-a semantycznym układem) */
+.menu {
+    background-color: var(--bg-surface);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.menu-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item h4 {
+    font-size: 1.25rem;
+}
+
+.menu-item .price {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+.menu-item-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Stopka */
+.footer {
+    background-color: #050505;
+    padding: 6rem 0 2rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-brand {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.footer-desc {
+    color: var(--text-secondary);
+    max-width: 300px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.footer-col p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.highlight-text {
+    color: var(--accent-gold) !important;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.closed {
+    color: #8b3a3a !important;
+    margin-top: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Mobile: Zaprojektowane od nowa, nie tylko skurczone */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        display: none; /* Ukryte na potrzeby tego uproszczonego dema (wymaga JS do Menu Hamburgera) */
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .image-placeholder {
+        height: 300px;
+        order: -1; /* Przesunięcie zdjęcia nad tekst na mobile */
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .footer-desc {
+        max-width: 100%;
+    }
+}
+
+/* Mikroanimacje */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
