@@ -3,59 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restauracja Marcin | Sale</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
+    <title>Sale — Restauracja Marcin, sale na przyjęcia w Zawadzie</title>
+    <meta name="description" content="Cztery klimatyzowane sale Restauracji Marcin: restauracyjna do 150 osób, bankietowa do 40, kameralna do 22 oraz pokoje zabaw dla dzieci.">
+    <link rel="canonical" href="https://www.restauracjamarcin.pl/sale.html">
+    <meta name="theme-color" content="#1d3f6b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">Marcin</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="sale.html" class="active">Sale i Pokoje</a></li>
-            <li><a href="przyjecia.html">Przyjęcia</a></li>
-        </ul>
+
+    <div class="topbar">
+        <div class="wrap">
+            <span><span class="hide-sm">Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span></span>
+            <span><a href="tel:+48774740017">tel. 77 474 00 17</a><span class="sep">·</span><a href="mailto:restauracjamarcin@interia.pl" class="hide-sm">restauracjamarcin@interia.pl</a></span>
+        </div>
+    </div>
+
+    <nav class="nav" aria-label="Nawigacja główna">
+        <div class="wrap">
+            <a href="index.html" class="brand"><b>Restauracja Marcin</b><span>Zawada · Opole</span></a>
+            <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="menu">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="sale.html" aria-current="page">Sale</a></li>
+                <li><a href="przyjecia.html">Przyjęcia</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="tel:+48774740017" class="btn btn--brass nav-cta">Rezerwacja</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <header class="section section--cobalt" style="padding-top:clamp(3rem,7vw,5rem);padding-bottom:clamp(3rem,7vw,5rem);">
+        <div class="porcelain-motif" aria-hidden="true"></div>
+        <div class="wrap" style="position:relative;z-index:2;">
+            <span class="eyebrow on-cobalt">Sale i przestrzenie</span>
+            <h1 style="font-size:clamp(2.4rem,6vw,4rem);margin:0.6rem 0 0.6rem;color:#fff;">Cztery sale na Twoją okazję</h1>
+            <p style="max-width:54ch;opacity:0.86;">Wesele na sto osób czy kameralna komunia dla najbliższych, każde z pomieszczeń jest klimatyzowane i gotowe na przyjęcie gości.</p>
+        </div>
+    </header>
+
     <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h1>Nasze Sale i Udogodnienia</h1>
-                <div class="divider"></div>
+        <div class="wrap">
+            <div class="halls">
+                <article class="hall reveal">
+                    <span class="cap">Do 150 osób</span>
+                    <h3>Sala restauracyjna</h3>
+                    <p>Elegancka, klimatyzowana przestrzeń z bezpośrednim dostępem do baru. Nasza największa sala, stworzona na duże wydarzenia i parkiet.</p>
+                    <ul>
+                        <li>Do 150 osób w ustawieniu konferencyjnym</li>
+                        <li>Do 100 osób w ustawieniu balowym</li>
+                        <li>Klimatyzacja i dostęp do baru</li>
+                    </ul>
+                </article>
+                <article class="hall reveal d1">
+                    <span class="cap">Do 40 osób</span>
+                    <h3>Sala bankietowa</h3>
+                    <p>Dyskretne miejsce z osobnym wyjściem na taras. Klasyczny wystrój, który sprawdzi się na rodzinne spotkania i mniejsze przyjęcia.</p>
+                    <ul>
+                        <li>Do 40 osób</li>
+                        <li>Indywidualne wyjście na taras</li>
+                        <li>Klimatyzowana przestrzeń</li>
+                    </ul>
+                </article>
+                <article class="hall reveal">
+                    <span class="cap">Do 22 osób</span>
+                    <h3>Sala kameralna</h3>
+                    <p>Przytulne wnętrze na poddaszu, zaprojektowane z myślą o prywatności i rodzinnej atmosferze najbliższego grona.</p>
+                    <ul>
+                        <li>Do 22 osób</li>
+                        <li>Oddzielna toaleta z przewijakiem</li>
+                        <li>Kameralny klimat na poddaszu</li>
+                    </ul>
+                </article>
+                <article class="hall reveal d1">
+                    <span class="cap">Dla najmłodszych</span>
+                    <h3>Pokoje zabaw</h3>
+                    <p>Dwa osobne pokoje zabaw, na parterze i na piętrze, żeby dzieci miały swoje miejsce, a rodzice spokojnie zjedli do końca.</p>
+                    <ul>
+                        <li>Dwa pokoje na dwóch poziomach</li>
+                        <li>Osobne menu dziecięce</li>
+                        <li>Blisko sal, w zasięgu wzroku rodziców</li>
+                    </ul>
+                </article>
             </div>
 
-            <div class="grid-2-col">
-                <div class="info-box">
-                    <h2>01. Sala Restauracyjna</h2>
-                    <p>Przyjazne i eleganckie klimatyzowane pomieszczenie z bezpośrednim dostępem do baru. Idealne na duże wydarzenia.</p>
-                    <ul>
-                        <li>Do 150 osób w formie konferencyjnej</li>
-                        <li>Do 100 osób w formie balowej</li>
-                    </ul>
-                </div>
-                <div class="info-box">
-                    <h2>02. Sala Bankietowa</h2>
-                    <p>Miejsce dyskretne, z indywidualnym wyjściem na taras. Idealne na rodzinne spotkania o klasycznym wystroju.</p>
-                    <ul>
-                        <li>Klimatyzowana przestrzeń</li>
-                        <li>Mieszcząca do 40 osób</li>
-                    </ul>
-                </div>
-                <div class="info-box">
-                    <h2>03. Sala Kameralna</h2>
-                    <p>Przytulna przestrzeń na poddaszu zaprojektowana z myślą o pełnej prywatności i rodzinnej atmosferze.</p>
-                    <ul>
-                        <li>Oddzielna toaleta i przewijak</li>
-                        <li>Mieszcząca do 22 osób</li>
-                    </ul>
-                </div>
-                <div class="info-box">
-                    <h2>04. Pokoje Zabaw</h2>
-                    <p>Z myślą o najmłodszych, w naszej restauracji mieszczą się dwa odrębne pokoje zabaw dla dzieci, zarówno na parterze jak i na piętrze.</p>
-                </div>
+            <div class="btn-row reveal" style="margin-top:2.6rem;justify-content:center;">
+                <a href="przyjecia.html" class="btn btn--cobalt">Oferta i cennik przyjęć</a>
+                <a href="tel:+48774740017" class="btn btn--outline-dark">Zapytaj o termin</a>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div><span class="tag">Zawada · Opole</span><h4>Restauracja Marcin</h4><p>Domowa kuchnia śląska, sale na przyjęcia i miejsce, do którego wraca się z rodziną.</p></div>
+                <div class="col"><h5>Nawigacja</h5><ul><li><a href="index.html">Start</a></li><li><a href="menu.html">Menu</a></li><li><a href="sale.html">Sale</a></li><li><a href="przyjecia.html">Przyjęcia</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+                <div class="col"><h5>Kontakt</h5><ul><li>ul. Oleska 43</li><li>46-022 Zawada k. Opola</li><li><a href="tel:+48774740017">tel. 77 474 00 17</a></li><li><a href="mailto:restauracjamarcin@interia.pl">restauracjamarcin@interia.pl</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><span>© <span data-year>2026</span> Restauracja Marcin · NIP 991 027 61 75</span><span>Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

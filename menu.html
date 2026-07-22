@@ -3,69 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restauracja Marcin | Menu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
+    <title>Menu — Restauracja Marcin, kuchnia śląska w Zawadzie</title>
+    <meta name="description" content="Karta dań Restauracji Marcin: przystawki, zupy, dania śląskie, menu dziecięce i desery. Rolada, kluski śląskie, żurek, pieczona kaczka.">
+    <link rel="canonical" href="https://www.restauracjamarcin.pl/menu.html">
+    <meta name="theme-color" content="#1d3f6b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">Marcin</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="menu.html" class="active">Menu</a></li>
-            <li><a href="sale.html">Sale</a></li>
-            <li><a href="przyjecia.html">Przyjęcia</a></li>
-        </ul>
+
+    <div class="topbar">
+        <div class="wrap">
+            <span><span class="hide-sm">Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span></span>
+            <span>
+                <a href="tel:+48774740017">tel. 77 474 00 17</a>
+                <span class="sep">·</span>
+                <a href="mailto:restauracjamarcin@interia.pl" class="hide-sm">restauracjamarcin@interia.pl</a>
+            </span>
+        </div>
+    </div>
+
+    <nav class="nav" aria-label="Nawigacja główna">
+        <div class="wrap">
+            <a href="index.html" class="brand"><b>Restauracja Marcin</b><span>Zawada · Opole</span></a>
+            <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="menu">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="menu.html" aria-current="page">Menu</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="przyjecia.html">Przyjęcia</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="tel:+48774740017" class="btn btn--brass nav-cta">Rezerwacja</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <!-- Nagłówek strony -->
+    <header class="section section--cobalt" style="padding-top:clamp(3rem,7vw,5rem);padding-bottom:clamp(3rem,7vw,5rem);">
+        <div class="porcelain-motif" aria-hidden="true"></div>
+        <div class="wrap" style="position:relative;z-index:2;">
+            <span class="eyebrow on-cobalt">Karta dań</span>
+            <h1 style="font-size:clamp(2.4rem,6vw,4rem);margin:0.6rem 0 0.6rem;color:#fff;">Menu Restauracji Marcin</h1>
+            <p style="max-width:52ch;opacity:0.86;">Śląska klasyka gotowana na miejscu. Ceny w złotych, w nawiasach waga porcji.</p>
+        </div>
+    </header>
+
     <section class="section">
-        <div class="container">
-            <div class="section-header"><h1>Menu Restauracji</h1></div>
+        <div class="wrap wrap--narrow">
 
-            <div class="menu-category">
+            <div class="menu-course reveal">
                 <h3>Przystawki</h3>
-                <div class="menu-grid">
-                    <article><div class="menu-item-header"><h4>Befsztyk Tatarski</h4><span class="price">46.00,-</span></div><p class="menu-desc">Ogórek / cebula / masło / grzanka (300g)</p></article>
-                    <article><div class="menu-item-header"><h4>Śledź w oleju</h4><span class="price">30.00,-</span></div><p class="menu-desc">Cebula / jabłko / śmietana / pieczywo (300g)</p></article>
-                    <article><div class="menu-item-header"><h4>Smażone pieczarki</h4><span class="price">25.00,-</span></div><p class="menu-desc">Mix sałat / sos czosnkowy (180g)</p></article>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="row"><h4>Befsztyk tatarski</h4><span class="dots"></span><span class="price">46 zł</span></div>
+                        <p class="desc">Ogórek, cebula, masło, grzanka <span class="g">(300 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Śledź w oleju</h4><span class="dots"></span><span class="price">30 zł</span></div>
+                        <p class="desc">Cebula, jabłko, śmietana, pieczywo <span class="g">(300 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Smażone pieczarki</h4><span class="dots"></span><span class="price">25 zł</span></div>
+                        <p class="desc">Mix sałat, sos czosnkowy <span class="g">(180 g)</span></p>
+                    </div>
                 </div>
             </div>
 
-            <div class="menu-category">
+            <div class="menu-course reveal">
                 <h3>Zupy</h3>
-                <div class="menu-grid">
-                    <article><div class="menu-item-header"><h4>Rosół</h4><span class="price">18.00,-</span></div><p class="menu-desc">Makaron / marchewka / pietruszka (400g)</p></article>
-                    <article><div class="menu-item-header"><h4>Żurek Staropolski</h4><span class="price">25.00,-</span></div><p class="menu-desc">Ziemniaki / jajko (400g)</p></article>
-                    <article><div class="menu-item-header"><h4>Krem czosnkowy z grzanką</h4><span class="price">25.00,-</span></div><p class="menu-desc">(300g)</p></article>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="row"><h4>Rosół</h4><span class="dots"></span><span class="price">18 zł</span></div>
+                        <p class="desc">Makaron, marchewka, pietruszka <span class="g">(400 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Żurek staropolski</h4><span class="dots"></span><span class="price">25 zł</span></div>
+                        <p class="desc">Ziemniaki, jajko <span class="g">(400 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Krem czosnkowy</h4><span class="dots"></span><span class="price">25 zł</span></div>
+                        <p class="desc">Z grzanką <span class="g">(300 g)</span></p>
+                    </div>
                 </div>
             </div>
 
-            <div class="menu-category">
-                <h3>Dania Główne</h3>
-                <div class="menu-grid">
-                    <article><div class="menu-item-header"><h4>Pieczona Kaczka</h4><span class="price">70.00,-</span></div><p class="menu-desc">Kluski śląskie / modra kapusta / sos pieczeniowy (900g)</p></article>
-                    <article><div class="menu-item-header"><h4>Duma Śląskiej Kuchni</h4><span class="price">59.00,-</span></div><p class="menu-desc">Rolada wołowa / kluski śląskie / modra kapusta (600g)</p></article>
-                    <article><div class="menu-item-header"><h4>Smażony Sandacz w maśle</h4><span class="price">70.00,-</span></div><p class="menu-desc">Szparagi / łódeczki ziemniaczane (600g)</p></article>
-                    <article><div class="menu-item-header"><h4>Pierogi (różne rodzaje)</h4><span class="price">od 4.00,-</span></div><p class="menu-desc">Ruskie, z mięsem lub na słodko (cena za sztukę)</p></article>
+            <div class="menu-course reveal">
+                <h3>Dania główne</h3>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="row"><h4>Duma Śląskiej Kuchni</h4><span class="dots"></span><span class="price">59 zł</span></div>
+                        <p class="desc">Rolada wołowa, kluski śląskie, modra kapusta <span class="g">(600 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Pieczona kaczka</h4><span class="dots"></span><span class="price">70 zł</span></div>
+                        <p class="desc">Kluski śląskie, modra kapusta, sos pieczeniowy <span class="g">(900 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Smażony sandacz w maśle</h4><span class="dots"></span><span class="price">70 zł</span></div>
+                        <p class="desc">Szparagi, łódeczki ziemniaczane <span class="g">(600 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Pierogi</h4><span class="dots"></span><span class="price">od 4 zł</span></div>
+                        <p class="desc">Ruskie, z mięsem lub na słodko <span class="g">(cena za sztukę)</span></p>
+                    </div>
                 </div>
             </div>
 
-            <div class="menu-category">
-                <h3>Menu Dziecięce</h3>
-                <div class="menu-grid">
-                    <article><div class="menu-item-header"><h4>Uczta Juniora</h4><span class="price">30.00,-</span></div><p class="menu-desc">Schab panierowany / frytki / surówka (325g)</p></article>
-                    <article><div class="menu-item-header"><h4>Nuggetsy z kurczaka</h4><span class="price">26.00,-</span></div><p class="menu-desc">Frytki / ketchup (325g)</p></article>
+            <div class="menu-course reveal">
+                <h3>Menu dziecięce</h3>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="row"><h4>Uczta juniora</h4><span class="dots"></span><span class="price">30 zł</span></div>
+                        <p class="desc">Schab panierowany, frytki, surówka <span class="g">(325 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Nuggetsy z kurczaka</h4><span class="dots"></span><span class="price">26 zł</span></div>
+                        <p class="desc">Frytki, ketchup <span class="g">(325 g)</span></p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="menu-category">
+
+            <div class="menu-course reveal">
                 <h3>Desery</h3>
-                <div class="menu-grid">
-                    <article><div class="menu-item-header"><h4>Szarlotka z pieca</h4><span class="price">30.00,-</span></div><p class="menu-desc">Lody śmietankowe / bita śmietana (280g)</p></article>
-                    <article><div class="menu-item-header"><h4>Naleśniki czekoladowe</h4><span class="price">32.00,-</span></div><p class="menu-desc">Banan / Malibu / Nutella (280g)</p></article>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="row"><h4>Szarlotka z pieca</h4><span class="dots"></span><span class="price">30 zł</span></div>
+                        <p class="desc">Lody śmietankowe, bita śmietana <span class="g">(280 g)</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="row"><h4>Naleśniki czekoladowe</h4><span class="dots"></span><span class="price">32 zł</span></div>
+                        <p class="desc">Banan, Malibu, Nutella <span class="g">(280 g)</span></p>
+                    </div>
                 </div>
             </div>
+
+            <p class="note reveal">Organizujesz przyjęcie dla grupy? Przygotowujemy osobne menu weselne i okolicznościowe. Zajrzyj do <a href="przyjecia.html" style="color:var(--cobalt);font-weight:600;">oferty przyjęć</a> albo zadzwoń: <a href="tel:+48774740017" style="color:var(--cobalt);font-weight:600;">77 474 00 17</a>.</p>
+
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div>
+                    <span class="tag">Zawada · Opole</span>
+                    <h4>Restauracja Marcin</h4>
+                    <p>Domowa kuchnia śląska, sale na przyjęcia i miejsce, do którego wraca się z rodziną.</p>
+                </div>
+                <div class="col"><h5>Nawigacja</h5><ul><li><a href="index.html">Start</a></li><li><a href="menu.html">Menu</a></li><li><a href="sale.html">Sale</a></li><li><a href="przyjecia.html">Przyjęcia</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+                <div class="col"><h5>Kontakt</h5><ul><li>ul. Oleska 43</li><li>46-022 Zawada k. Opola</li><li><a href="tel:+48774740017">tel. 77 474 00 17</a></li><li><a href="mailto:restauracjamarcin@interia.pl">restauracjamarcin@interia.pl</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span data-year>2026</span> Restauracja Marcin · NIP 991 027 61 75</span>
+                <span>Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

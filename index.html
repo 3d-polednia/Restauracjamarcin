@@ -3,53 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restauracja Marcin | Strona Główna</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
+    <title>Restauracja Marcin — kuchnia śląska w Zawadzie pod Opolem</title>
+    <meta name="description" content="Restauracja Marcin w Zawadzie k. Opola. Domowa kuchnia śląska, cztery sale na wesela, komunie i przyjęcia rodzinne, dwa pokoje zabaw dla dzieci. Rezerwacja: 77 474 00 17.">
+    <link rel="canonical" href="https://www.restauracjamarcin.pl/">
+    <meta name="theme-color" content="#1d3f6b">
+
+    <meta property="og:type" content="restaurant">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:title" content="Restauracja Marcin — kuchnia śląska w Zawadzie pod Opolem">
+    <meta property="og:description" content="Domowa kuchnia śląska, sale na przyjęcia i pokoje zabaw dla dzieci. Zawada, ul. Oleska 43.">
+    <meta property="og:image" content="https://www.restauracjamarcin.pl/prezent.jpg">
+    <meta property="og:url" content="https://www.restauracjamarcin.pl/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Restauracja Marcin",
+      "servesCuisine": "Kuchnia śląska, polska",
+      "priceRange": "$$",
+      "telephone": "+48774740017",
+      "email": "restauracjamarcin@interia.pl",
+      "url": "https://www.restauracjamarcin.pl/",
+      "image": "https://www.restauracjamarcin.pl/prezent.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Oleska 43",
+        "addressLocality": "Zawada",
+        "postalCode": "46-022",
+        "addressRegion": "opolskie",
+        "addressCountry": "PL"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "20:00"
+      }]
+    }
+    </script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">Marcin</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Start</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="sale.html">Sale i Pokoje</a></li>
-            <li><a href="przyjecia.html">Przyjęcia</a></li>
-        </ul>
+
+    <!-- ============ PASEK GÓRNY ============ -->
+    <div class="topbar">
+        <div class="wrap">
+            <span><span class="hide-sm">Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span></span>
+            <span>
+                <a href="tel:+48774740017">tel. 77 474 00 17</a>
+                <span class="sep">·</span>
+                <a href="mailto:restauracjamarcin@interia.pl" class="hide-sm">restauracjamarcin@interia.pl</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- ============ NAWIGACJA ============ -->
+    <nav class="nav" aria-label="Nawigacja główna">
+        <div class="wrap">
+            <a href="index.html" class="brand">
+                <b>Restauracja Marcin</b>
+                <span>Zawada · Opole</span>
+            </a>
+            <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="menu">
+                <li><a href="index.html" aria-current="page">Start</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="przyjecia.html">Przyjęcia</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="tel:+48774740017" class="btn btn--brass nav-cta">Rezerwacja</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section class="section">
-        <div class="container section-header">
-            <span class="gold" style="text-transform: uppercase; letter-spacing: 2px;">Serdecznie zapraszamy</span>
-            <h1 style="font-size: 4rem; margin: 1rem 0;">Jedz. Smakuj. Wracaj.</h1>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem;">Elegancka przestrzeń na Twoje wyjątkowe chwile. Odkryj bogactwo smaków w naszym menu oraz profesjonalną organizację przyjęć okolicznościowych.</p>
-            <a href="menu.html" class="btn-primary">Sprawdź Menu</a>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+        <div class="porcelain-motif" aria-hidden="true"></div>
+        <div class="wrap">
+            <div class="hero-inner">
+                <span class="eyebrow on-cobalt">Kuchnia śląska · Zawada pod Opolem</span>
+                <h1>Rolada, kluski i <em>modra kapusta</em> jak u babci</h1>
+                <p class="lead">Gotujemy śląsko i po domowemu, przyjmujemy wesela i komunie w czterech salach, a dzieci mają u nas dwa własne pokoje zabaw. Usiądź, najedz się, zostań na dłużej.</p>
+                <div class="btn-row">
+                    <a href="menu.html" class="btn btn--brass">Zobacz menu</a>
+                    <a href="tel:+48774740017" class="btn btn--ghost">Zarezerwuj stół</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-meta">
+            <div class="wrap">
+                <div class="item"><b>4</b><span>sale na przyjęcia</span></div>
+                <div class="item"><b>do 150</b><span>gości pod jednym dachem</span></div>
+                <div class="item"><b>2</b><span>pokoje zabaw dla dzieci</span></div>
+                <div class="item"><b>Wt–Nd</b><span>otwarte 12:00–20:00</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ O NAS / FILARY ============ -->
+    <section class="section" aria-labelledby="onas">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Co u nas znajdziesz</span>
+                <h2 id="onas">Trzy powody, dla których ludzie do nas wracają</h2>
+                <p>Jedna kuchnia, jeden dom, a w nim miejsce na codzienny obiad, rodzinne święto i popołudnie z dziećmi.</p>
+            </div>
+            <div class="pillars">
+                <article class="pillar reveal">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v7a2 2 0 0 0 2 2h0V3M8 3v9m-2 0v9M18 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg>
+                    <h3>Śląska kuchnia</h3>
+                    <p>Rolada wołowa z kluskami śląskimi i modrą kapustą, żurek na zakwasie, pieczona kaczka. Gotujemy to, co znasz z rodzinnego stołu.</p>
+                </article>
+                <article class="pillar reveal d1">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12M3 21h18M9 21v-6h6v6"/></svg>
+                    <h3>Sale na przyjęcia</h3>
+                    <p>Wesele, komunia, chrzciny, stypa czy jubileusz. Cztery klimatyzowane sale przyjmą od kameralnej rodziny po sto osób na parkiecie.</p>
+                </article>
+                <article class="pillar reveal d2">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.4"/><path d="M12 8v7m-4 6 4-6 4 6M6 11l6 1 6-1"/></svg>
+                    <h3>Kącik dla dzieci</h3>
+                    <p>Dwa pokoje zabaw, na parterze i na piętrze, oddzielna toaleta z przewijakiem i osobne menu juniora. Rodzice jedzą spokojnie.</p>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- Sekcja Voucher -->
-    <section class="section" style="background: var(--bg-surface);">
-        <div class="container grid-2-col">
-            <div class="info-box">
-                <h2>Podaruj prezent swoim bliskim</h2>
-                <div class="divider" style="margin: 1.5rem 0;"></div>
-                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Chcesz zrobić komuś prezent? Zapraszamy do lokalu celem omówienia szczegółów i wypisania ekskluzywnego vouchera podarunkowego.</p>
-                <a href="tel:+48774740017" class="btn-primary">Skontaktuj się z nami</a>
+    <!-- ============ DANIA-WIZYTÓWKI ============ -->
+    <section class="section section--cobalt" aria-labelledby="dania">
+        <div class="porcelain-motif" aria-hidden="true"></div>
+        <div class="wrap" style="position:relative;z-index:2;">
+            <div class="section-head reveal">
+                <span class="eyebrow on-cobalt">Z naszej karty</span>
+                <h2 id="dania">Dania, po które ludzie przyjeżdżają</h2>
+                <p>Kilka pozycji, od których najlepiej zacząć znajomość z kuchnią Marcina.</p>
             </div>
-            <div>
-                <!-- Miejsce na zdjęcie vouchera -->
-    <img src="prezent.jpg" alt="Voucher podarunkowy Restauracja Marcin" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <div class="dishes">
+                <article class="dish reveal">
+                    <span class="tag">Duma domu</span>
+                    <div class="top"><h3>Duma Śląskiej Kuchni</h3><span class="price">59 zł</span></div>
+                    <p>Rolada wołowa, kluski śląskie i modra kapusta. Klasyk, którego nie zdejmujemy z karty.</p>
+                </article>
+                <article class="dish reveal d1">
+                    <span class="tag">Na większy głód</span>
+                    <div class="top"><h3>Pieczona kaczka</h3><span class="price">70 zł</span></div>
+                    <p>Z kluskami śląskimi, modrą kapustą i sosem pieczeniowym. Porcja 900 g.</p>
+                </article>
+                <article class="dish reveal d2">
+                    <span class="tag">Prosto z rosołu</span>
+                    <div class="top"><h3>Żurek staropolski</h3><span class="price">25 zł</span></div>
+                    <p>Na zakwasie, z ziemniakami i jajkiem. Tak, jak żurek smakować powinien.</p>
+                </article>
+            </div>
+            <div class="btn-row reveal" style="margin-top:2.6rem;">
+                <a href="menu.html" class="btn btn--brass">Cała karta dań</a>
             </div>
         </div>
     </section>
 
+    <!-- ============ SALE (teaser) ============ -->
+    <section class="section" aria-labelledby="sale">
+        <div class="wrap">
+            <div class="split">
+                <div class="split-media reveal">
+                    <div class="media-frame">
+                        <div class="motif-fill" aria-hidden="true"></div>
+                        <div class="label"><b>Sala restauracyjna</b><span>do 150 osób · klimatyzacja · dostęp do baru</span></div>
+                    </div>
+                </div>
+                <div class="split-body reveal d1">
+                    <span class="eyebrow">Sale i przestrzenie</span>
+                    <h2 id="sale">Miejsce na każde święto, duże i małe</h2>
+                    <p>Od kameralnej sali na poddaszu dla 22 osób, przez salę bankietową z wyjściem na taras, po dużą salę restauracyjną, w której zmieści się cała rodzina i orkiestra. Każda klimatyzowana, każda gotowa na Twoją okazję.</p>
+                    <div class="btn-row">
+                        <a href="sale.html" class="btn btn--cobalt">Zobacz sale</a>
+                        <a href="przyjecia.html" class="btn btn--outline-dark">Oferta przyjęć</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VOUCHER ============ -->
+    <section class="section section--surface" aria-labelledby="voucher">
+        <div class="wrap">
+            <div class="split reverse">
+                <div class="split-media reveal">
+                    <img src="prezent.jpg" alt="Voucher podarunkowy Restauracji Marcin" loading="lazy">
+                </div>
+                <div class="split-body reveal d1">
+                    <span class="eyebrow">Pomysł na prezent</span>
+                    <h2 id="voucher">Podaruj bliskim wieczór przy dobrym stole</h2>
+                    <p>Voucher podarunkowy to prezent na urodziny, imieniny albo bez okazji. Wpadnij do nas, ustalimy kwotę i wypiszemy go od ręki.</p>
+                    <div class="btn-row">
+                        <a href="tel:+48774740017" class="btn btn--brass">Zamów voucher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ KONTAKT / GODZINY ============ -->
+    <section class="section" aria-labelledby="kontakt">
+        <div class="wrap">
+            <div class="contact-grid">
+                <div class="reveal">
+                    <div class="section-head" style="margin-bottom:2rem;">
+                        <span class="eyebrow">Odwiedź nas</span>
+                        <h2 id="kontakt">Zapraszamy do Zawady</h2>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Adres</h3>
+                        <p>ul. Oleska 43<br>46-022 Zawada k. Opola</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Rezerwacje i kontakt</h3>
+                        <p><a href="tel:+48774740017">tel. 77 474 00 17</a><br>
+                        <a href="mailto:restauracjamarcin@interia.pl">restauracjamarcin@interia.pl</a></p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Godziny otwarcia</h3>
+                        <ul class="hours">
+                            <li><span class="day">Wtorek – niedziela</span><span>12:00 – 20:00</span></li>
+                            <li><span class="day">Poniedziałek</span><span class="closed">nieczynne</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reveal d1" style="height:100%;min-height:340px;">
+                    <iframe class="map-frame" title="Mapa dojazdu do Restauracji Marcin, ul. Oleska 43, Zawada"
+                        src="https://www.google.com/maps?q=ul.+Oleska+43,+46-022+Zawada,+Opole&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ STOPKA ============ -->
     <footer class="footer">
-        <div class="container">
-            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 2rem; margin-bottom: 1rem;">Restauracja Marcin</h3>
-            <p>ul. Oleska 43, 46-022 Zawada k. Opola | NIP: 991 027 61 75</p>
-            <p>Email: restauracjamarcin@interia.pl | Tel: <span class="gold">+48 77 474 00 17</span></p>
-            <p style="margin-top: 1rem;">Godziny otwarcia: Wt-Nd: 12.00-20.00 | Poniedziałki: Nieczynne</p>
+        <div class="wrap">
+            <div class="footer-grid">
+                <div>
+                    <span class="tag">Zawada · Opole</span>
+                    <h4>Restauracja Marcin</h4>
+                    <p>Domowa kuchnia śląska, sale na przyjęcia i miejsce, do którego wraca się z rodziną.</p>
+                </div>
+                <div class="col">
+                    <h5>Nawigacja</h5>
+                    <ul>
+                        <li><a href="index.html">Start</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="sale.html">Sale</a></li>
+                        <li><a href="przyjecia.html">Przyjęcia</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Kontakt</h5>
+                    <ul>
+                        <li>ul. Oleska 43</li>
+                        <li>46-022 Zawada k. Opola</li>
+                        <li><a href="tel:+48774740017">tel. 77 474 00 17</a></li>
+                        <li><a href="mailto:restauracjamarcin@interia.pl">restauracjamarcin@interia.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span data-year>2026</span> Restauracja Marcin · NIP 991 027 61 75</span>
+                <span>Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

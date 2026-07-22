@@ -3,51 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restauracja Marcin | Przyjęcia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
+    <title>Przyjęcia i catering — Restauracja Marcin, Zawada pod Opolem</title>
+    <meta name="description" content="Oferta przyjęć Restauracji Marcin: menu weselne i okolicznościowe od 140 zł za osobę, zimna płyta, kolacje, torty i wynajem sal. Zawada k. Opola.">
+    <link rel="canonical" href="https://www.restauracjamarcin.pl/przyjecia.html">
+    <meta name="theme-color" content="#1d3f6b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">Marcin</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="sale.html">Sale</a></li>
-            <li><a href="przyjecia.html" class="active">Przyjęcia</a></li>
-        </ul>
+
+    <div class="topbar">
+        <div class="wrap">
+            <span><span class="hide-sm">Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span></span>
+            <span><a href="tel:+48774740017">tel. 77 474 00 17</a><span class="sep">·</span><a href="mailto:restauracjamarcin@interia.pl" class="hide-sm">restauracjamarcin@interia.pl</a></span>
+        </div>
+    </div>
+
+    <nav class="nav" aria-label="Nawigacja główna">
+        <div class="wrap">
+            <a href="index.html" class="brand"><b>Restauracja Marcin</b><span>Zawada · Opole</span></a>
+            <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="menu">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="przyjecia.html" aria-current="page">Przyjęcia</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="tel:+48774740017" class="btn btn--brass nav-cta">Rezerwacja</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <header class="section section--cobalt" style="padding-top:clamp(3rem,7vw,5rem);padding-bottom:clamp(3rem,7vw,5rem);">
+        <div class="porcelain-motif" aria-hidden="true"></div>
+        <div class="wrap" style="position:relative;z-index:2;">
+            <span class="eyebrow on-cobalt">Przyjęcia i catering</span>
+            <h1 style="font-size:clamp(2.4rem,6vw,4rem);margin:0.6rem 0 0.6rem;color:#fff;">Zajmiemy się Twoim przyjęciem</h1>
+            <p style="max-width:56ch;opacity:0.86;">Wesele, komunia, chrzciny, jubileusz albo stypa. Poniżej podstawowa oferta. Szczegóły dopasujemy do liczby gości i okazji podczas rozmowy.</p>
+            <p style="font-size:0.82rem;letter-spacing:0.04em;opacity:0.7;margin-top:1rem;">Oferta obowiązuje do 31 grudnia 2026 roku.</p>
+        </div>
+    </header>
+
     <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h1>Przyjęcia i Catering</h1>
-                <p>Oferta obowiązuje do 31 grudnia 2026 roku</p>
-                <div class="divider"></div>
+        <div class="wrap wrap--narrow">
+
+            <article class="offer-card reveal">
+                <div class="head">
+                    <h3>Menu okolicznościowe</h3>
+                    <span class="tariff">140 zł <small>/ osoba</small></span>
+                </div>
+                <div class="offer-lines">
+                    <div class="line"><b>Zupa</b><span>Rosół z makaronem (300 g).</span></div>
+                    <div class="line"><b>Danie zasadnicze</b><span>Płyta mięs: rolada wieprzowa, kotlet schabowy, de volaille, sakwa z grzybami. Do tego sos pieczeniowy, kluski śląskie, kapusta czerwona i bukiet warzyw.</span></div>
+                    <div class="line"><b>Przerwa deserowa</b><span>Kawa i herbata bez ograniczeń oraz puchar lodowy lub owoce.</span></div>
+                </div>
+            </article>
+
+            <article class="offer-card reveal">
+                <div class="head"><h3>Dodatki i catering</h3></div>
+                <dl class="price-grid">
+                    <dt>Zimna płyta standardowa</dt><dd>63 zł / os.</dd>
+                    <dt>Zimna płyta nowoczesna</dt><dd>75 zł / os.</dd>
+                    <dt>Kolacja II (barszcz z krokietem lub bogracz)</dt><dd>22 zł / os.</dd>
+                    <dt>Serwis własnego tortu (za dowodem zakupu)</dt><dd>3 zł / os.</dd>
+                </dl>
+                <p class="note" style="margin-top:1.4rem;">Torty i ciasta przygotowujemy we współpracy z cukiernią „Jaglo”. Możesz też dostarczyć własny tort za okazaniem dowodu zakupu. Dekoracje standardowe (obrusy, świece, serwetki) są w cenie menu, dekoracje kwiatowe wyceniamy osobno.</p>
+            </article>
+
+            <article class="offer-card reveal">
+                <div class="head"><h3>Wynajem sal</h3></div>
+                <dl class="price-grid">
+                    <dt>Sala restauracyjna, powyżej 50 osób</dt><dd>bez opłaty</dd>
+                    <dt>Sala restauracyjna, poniżej 50 osób</dt><dd>2 000 zł</dd>
+                    <dt>Sala bankietowa</dt><dd>500–800 zł</dd>
+                </dl>
+                <p class="desc" style="color:var(--ink-soft);font-size:0.9rem;margin-top:1rem;">Cena wynajmu sali bankietowej zależy od liczby gości i wybranego menu.</p>
+            </article>
+
+            <div class="offer-card reveal" style="background:var(--cobalt);color:#fff;text-align:center;border:0;">
+                <h3 style="color:#fff;font-size:1.7rem;margin-bottom:0.6rem;">Porozmawiajmy o Twojej okazji</h3>
+                <p style="color:var(--ink-on-cobalt);opacity:0.88;max-width:46ch;margin:0 auto 1.6rem;">Zadzwoń albo napisz. Ustalimy termin, menu i wszystkie szczegóły, żeby dzień był dokładnie taki, jak sobie wyobrażasz.</p>
+                <div class="btn-row" style="justify-content:center;">
+                    <a href="tel:+48774740017" class="btn btn--brass">Zadzwoń: 77 474 00 17</a>
+                    <a href="mailto:restauracjamarcin@interia.pl" class="btn btn--ghost">Napisz do nas</a>
+                </div>
             </div>
 
-            <div class="info-box">
-                <h2>Cennik Menu (140.00,- za osobę)</h2>
-                <p><strong>Zupa:</strong> Rosół z makaronem (300g).</p>
-                <p><strong>Danie zasadnicze:</strong> Płyta mięs (rolada wieprzowa, kotlet schabowy, devolay, sakwa z grzybami), sos pieczeniowy, kluski śląskie, kapusta czerwona, bukiet warzyw.</p>
-                <p><strong>Przerwa deserowa:</strong> Kawa, herbata (bez ograniczeń), puchar lodowy lub owoce.</p>
-            </div>
-
-            <div class="info-box" style="margin-top:2rem;">
-                <h2>Dodatki i Catering</h2>
-                <p>• Zimna płyta (standardowa: 63,- / nowoczesna: 75,- za osobę).</p>
-                <p>• Kolacja II (barszcz z krokietem lub bogracz: 22,- za osobę).</p>
-                <p>• Tort i ciasta: Współpraca z cukiernią "Jaglo" lub możliwość dostarczenia własnego tortu (wymagany dowód zakupu).</p>
-                <p>• Opłata serwisowa za własny tort: 3,- za osobę.</p>
-                <p>• Dekoracje: Standard w cenie menu (obrusy, świece, serwetki), dekoracje kwiatowe płatne dodatkowo.</p>
-            </div>
-
-            <div class="info-box" style="margin-top:2rem;">
-                <h2>Koszty wynajmu sali</h2>
-                <p>• Sala restauracyjna (powyżej 50 osób - brak opłaty; poniżej 50 osób - 2.000,-).</p>
-                <p>• Sala bankietowa (od 500,- do 800,- w zależności od liczby osób i wybranego menu).</p>
-            </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div><span class="tag">Zawada · Opole</span><h4>Restauracja Marcin</h4><p>Domowa kuchnia śląska, sale na przyjęcia i miejsce, do którego wraca się z rodziną.</p></div>
+                <div class="col"><h5>Nawigacja</h5><ul><li><a href="index.html">Start</a></li><li><a href="menu.html">Menu</a></li><li><a href="sale.html">Sale</a></li><li><a href="przyjecia.html">Przyjęcia</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+                <div class="col"><h5>Kontakt</h5><ul><li>ul. Oleska 43</li><li>46-022 Zawada k. Opola</li><li><a href="tel:+48774740017">tel. 77 474 00 17</a></li><li><a href="mailto:restauracjamarcin@interia.pl">restauracjamarcin@interia.pl</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><span>© <span data-year>2026</span> Restauracja Marcin · NIP 991 027 61 75</span><span>Wt–Nd 12:00–20:00 · poniedziałki nieczynne</span></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
